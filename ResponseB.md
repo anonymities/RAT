@@ -44,6 +44,7 @@ Thank you. RAT did not discover fundamentally new classes of bugs, but it reveal
     This set is representative not only because it spans 15 years of real-world bugs from widely deployed TLS libraries, but also because certificates and CRLs share highly similar ASN.1 structures—meaning historical certificate-parsing bugs are strongly indicative of potential flaws in CRL parsers. This structural homology makes them highly effective seeds for mutation-based testing, as confirmed by 13 developer-validated fixes.
     
 * ***C2: It was not entirely clear to me if the effort to create the specific domain-specific testing framework was worth it as a generic fuzzer seemed to do a good job and computation devoted to testing seems to be a minor expense. LLMs, in fact, may consume more computational time, but since it is provided as a service authors appear to ignore it.***
+
     Thank you for the comment. RAT outperforms generic fuzzers not in raw bug count, but in quality: it finds more semantic discrepancies unreachable via fuzzers' byte flips. RAT's 2-hour runtime includes all LLM usage, yielding >20× speedup compared to AFL++'s 42.6 hours. While LLMs have high training costs, these are amortized across users; the marginal cost here is low and justified by 13 confirmed fixes. Thus, RAT delivers better return on investment for structured object testing.
 
 * ***C3: The engineering solutions in how LLMs are used do not appear innovative.***
@@ -51,4 +52,5 @@ Thank you. RAT did not discover fundamentally new classes of bugs, but it reveal
     Thank you. While our use of LLMs builds on existing techniques, RAT’s novelty lies in the end-to-end pipeline that transforms **unstructured bug reports** into **structured mutation directives** and then into **ASN.1-aware test cases**. By leveraging LLMs, RAT uniquely bridges natural-language knowledge from real-world issues to binary-level, semantics-preserving fuzzing, addressing a gap generic code-generation approaches cannot solve. It’s a new workflow for protocol-aware testing.
 
 We appreciate the reviewer’s questions and comments, which helped us better articulate RAT’s novelty in the revised manuscript.
+
 
