@@ -58,6 +58,7 @@ Regarding BoringSSL, it is a fork of OpenSSL with nearly identical CRL parsing l
 
 
 * ***C8: Figure 4 is oversized, while the font and labels are too small.*** 
+
     Thank you for the feedback. We have resized Figure 4 and increased the font sizes of all labels and annotations to ensure clarity and readability in the revised manuscript.
      
 
@@ -73,6 +74,7 @@ Regarding BoringSSL, it is a fork of OpenSSL with nearly identical CRL parsing l
 * ***C11: The Related Work section is well structured but under-referenced. It should include more recent and relevant studies to better reflect the current research landscape.*** 
 
     In the revised manuscript, we have added recent and relevant studies to better reflect the current research landscape.
+
 
 
 We sincerely appreciate your invaluable observations and feedback, which have greatly improved the quality of our manuscript.
